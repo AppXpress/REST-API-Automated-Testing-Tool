@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>AppXpress - Test Automation</title>
+        <link rel="stylesheet" href="./lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="./lib/jquery-1.8.2/jquery-1.8.2.min.js"></script>
+        <script src="./lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script src="./lib/jquery.crypt-1.1.0/jquery.crypt.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/test-script.js"></script>
+        <script src="./js/automation.js"></script>
+	</head>
+	<body>
+	
+	   <!-- Home Page -->
+	   <div data-role="page">
+	   
+	       <div data-role="header" data-theme="b">
+	           <h1>AppXpress - QA Automation</h1>
+	       </div>
+	       
+	       <div data-role="content" data-theme="b">
+	       
+				<table width="100%">
+				    <tr>
+				        <td width="10%">
+				            <a href="#" data-role="button" data-theme="a" onClick="executeAll()">Execute Test</a>
+				        </td>
+				        <td width="40%"></td>
+				        <td width="50%" align="right">
+				            <strong><span id="final_result">Not Tested</span></strong>
+				        </td>
+				    </tr>
+				</table>
+				
+				<hr />
+				
+				<div id="test_case_list">
+	       
+				<!--ul data-role="listview" data-theme="c">
+					<li data-role="list-divider">Authorization and Authentication</span></li>
+					<li>
+					    <fieldset data-role="controlgroup">
+						    <input type="checkbox" name="test_1" id="test_1" data-theme="c" />
+						    <label for="test_1">
+							    <h3>Authentication request Process</h3>
+							    <p class="ui-li-aside">
+		                           <strong><span id="test_1_status">Not Tested</span></strong>
+		                        </p>
+						    </label>
+					    </fieldset>
+					    <div data-role="collapsible" data-theme="c">
+					        <h3>Request</h3>
+					        <div data-role="fieldcontain">
+			                     <label for="test_1_request_url">URL :</label>
+			                     <textarea id="test_1_request_url" name="test_1_request_url" readonly="readonly"></textarea>
+			                </div>
+			                <div data-role="fieldcontain">
+                                 <label for="test_1_request_method">Method :</label>
+                                 <input type="text" id="test_1_request_method" name="test_1_request_method" readonly="readonly" />
+                            </div>
+                            <div data-role="fieldcontain">
+                                 <label for="test_1_request_auth">Authorization :</label>
+                                 <input type="text" id="test_1_request_auth" name="test_1_request_auth" readonly="readonly" />
+                            </div>
+                            <div data-role="fieldcontain">
+                                 <label for="test_1_request_etag">If-Match :</label>
+                                 <input type="text" id="test_1_request_etag" name="test_1_request_etag" readonly="readonly" />
+                            </div>
+                            <div data-role="fieldcontain">
+                                 <label for="test_1_request_body">Request Body :</label>
+                                 <textarea id="test_1_request_body" name="test_1_request_body" readonly="readonly"></textarea>
+                            </div>
+                        </div>
+                        <div data-role="collapsible" data-theme="c">
+			                <h3>Response</h3>
+			                <div data-role="fieldcontain">
+                                 <label for="test_1_response_status">Status :</label>
+                                 <input type="text" id="test_1_response_status" name="test_1_response_status" readonly="readonly" />
+                            </div>
+                            <div data-role="fieldcontain">
+                                 <label for="test_1_response_auth">Authorization :</label>
+                                 <input type="text" id="test_1_response_auth" name="test_1_response_auth" readonly="readonly" />
+                            </div>
+                            <div data-role="fieldcontain">
+                                 <label for="test_1_response_etag">Fingerprint :</label>
+                                 <input type="text" id="test_1_response_etag" name="test_1_response_etag" readonly="readonly" />
+                            </div>
+			                <div data-role="fieldcontain">
+                                 <label for="test_1_response_body">Response Body :</label>
+                                 <textarea id="test_1_response_body" name="test_1_response_body" readonly="readonly"></textarea>
+                            </div>
+					    </div>
+					</li>
+					<li>
+                        <fieldset data-role="controlgroup">
+                            <input type="checkbox" name="test_2" id="test_2" data-theme="c" />
+                            <label for="test_2">
+                                <h3>Access through Future ID</h3>
+                                <p class="ui-li-aside">
+                                   <strong>Not Tested</strong>
+                                </p>
+                            </label>
+                        </fieldset>
+                    </li>
+                    <li data-role="list-divider">General</span></li>
+                    <li>
+                        <fieldset data-role="controlgroup">
+                            <input type="checkbox" name="test_3" id="test_3" data-theme="c" />
+                            <label for="test_3">
+                                <h3>User Authentication</h3>
+                                <p class="ui-li-aside">
+                                   <strong>Not Tested</strong>
+                                </p>
+                            </label>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset data-role="controlgroup">
+                            <input type="checkbox" name="test_4" id="test_4" data-theme="c" />
+                            <label for="test_4">
+                                <h3>Fetch Partner Community member detals By Name</h3>
+                                <p class="ui-li-aside">
+                                   <strong>Not Tested</strong>
+                                </p>
+                            </label>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset data-role="controlgroup">
+                            <input type="checkbox" name="test_5" id="test_5" data-theme="c" />
+                            <label for="test_5">
+                                <h3>Fetch Partner Community member detals By ID</h3>
+                                <p class="ui-li-aside">
+                                   <strong>Not Tested</strong>
+                                </p>
+                            </label>
+                        </fieldset>
+                    </li>
+				</ul-->
+				
+				</div>
+
+			   <div id="listui" class="list-ui"></div>
+               
+           </div>
+           
+           <div data-role="footer" data-theme="b">
+	           <h5>Powered by AppXpress</h5>
+	       </div>
+	   
+	   </div>
+	   
+	</body>
+</html>
