@@ -1,4 +1,5 @@
 
+// Environment & Login Credentials for the Test Suite
 var host = "http://commerce.qa.tradecard.com";
 var username = "qctest1";
 var password = "12345678";
