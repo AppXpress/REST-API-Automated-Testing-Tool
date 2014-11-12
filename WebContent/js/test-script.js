@@ -19,9 +19,7 @@ var test_suite_id = {
 	              		eTag			:	null, // For POST Requests use PREVIOUS_ETAG to use the Previous E-Tag from the response. For Get requests use null
 	              		response		:	[200], // Expected HTTP response Status. e.g. [200, 201]
 	              		assert			:	'response.status == "Active"' // Assertion Condition
-	              		
 	              	}
-	              	
 	              ]
 };
 */
@@ -39,9 +37,7 @@ var test_suite_1 = {
 	              		eTag			:	null,
 	              		response		:	[200],
 	              		assert			:	'response.status == "Active"'
-	              		
 	              	}
-	              	
 	              ]
 };
 
@@ -72,7 +68,6 @@ var test_suite_2 = {
 		              		assert			:	'response.result.length > 0'
 		              		
 		              	}
-		              	
 		              ]
 	};
 
