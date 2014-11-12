@@ -12,7 +12,7 @@ How to use:
 
 2. Set the values for host, username, password & dataKey as appropriate
 
-3. Update the Test Suites
+3. Update the Test Suites  
 *e.g:*
 ```
     var test_suite_id = {
@@ -33,7 +33,7 @@ How to use:
     };
 ```
 
-4. Add the Test Suite to the execution list
+4. Add the Test Suite to the execution list  
 *e.g:*
 ```
     var test_suites = [test_suite_1, test_suite_2];
