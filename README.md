@@ -8,10 +8,8 @@ REST API Automated Testing Tool
 
 How to use:
 
-1. Open the /WebContent/js/test-script.js
-
-2. Set the values for host, username, password & dataKey as appropriate
-
+1. Open the /WebContent/js/test-script.js  
+2. Set the values for host, username, password & dataKey as appropriate  
 3. Update the Test Suites  
 *e.g:*
 ```
@@ -32,15 +30,12 @@ How to use:
                       ]
     };
 ```
-
 4. Add the Test Suite to the execution list  
 *e.g:*
 ```
     var test_suites = [test_suite_1, test_suite_2];
 ```
-
-5. Open the /WebContent/automation.html with a Web Browser. Make sure you have Allowed JavaScript on the Browser
-
+5. Open the /WebContent/automation.html with a Web Browser. Make sure you have Allowed JavaScript on the Browser  
 6. Press the "Execute Test" button
 
 
