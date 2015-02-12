@@ -1,9 +1,9 @@
 
 // Environment & Login Credentials for the Test Suite
-var host = "http://commerce.qa.tradecard.com";
-var username = "qctest1";
-var password = "12345678";
-var dataKey = "55b4b8a1a38f2342c95308cc07387a782e5fe61b";
+var host = "https://commerce-supportq.qa.gtnexus.com";
+var username = "qctest2";
+var password = "87654321";
+var dataKey = "d40249378b53097c2199f9a9eb635db64d73e617";
 
 // Test Suite & Test Case format
 /*
@@ -48,7 +48,7 @@ var test_suite_2 = {
 		              	{
 		              		test_case_id	:	'AppX_RA_PICK_0001',
 		              		test_case_desc	:	'PickList Access',
-		              		url				:	'/rest/310/masterdata/127064329/?dataKey=' + dataKey,
+		              		url				:	'/rest/310/masterdata/132013251/?dataKey=' + dataKey,
 		              		type			:	'GET',
 		              		auth			:	PREVIOUS_AUTH_TOKEN,
 		              		data			: 	null,
